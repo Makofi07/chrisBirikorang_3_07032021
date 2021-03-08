@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
+    utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
+    restaurants car leur menu est préparé à l’avance."
+    />
     <link
       rel="shortcut icon"
       href="Public/img/favicon/favicon-32x32.png"
@@ -26,10 +31,137 @@
     <link rel="stylesheet" href="Public/css/style.css" />
     <title>Oh My Food</title>
   </head>
+
   <body>
     <div class="spinner-loader"></div>
     <header>
       <img src="Public/img/logo/ohmyfood.png" alt="logo" class="header_img" />
+      <div class="header_location">
+        <i class="fas fa-map-marker-alt header_location_icon"></i>
+        <p class="header_location_place">Paris, Belleville</p>
+      </div>
+      <h2 class="header_title">
+        Réservez le menu qui <br />
+        vous convient
+      </h2>
+      <p class="hero_subtitle">
+        Découvrez des réstaurants d'exception, séléctionnés par nos soins
+      </p>
+      <a href="/" class="header_cta">Explorer nos restaurants</a>
     </header>
+    <main>
+      <section class="running">
+        <h2 class="running_title">Fonctionnement</h2>
+        <ul>
+          <li>
+            <i class="fas fa-mobile-alt running_icon"></i>
+            <p class="running_choice">Choisissez un restaurant</p>
+          </li>
+          <li>
+            <i class="fas fa-list-ul running_icon"></i>
+            <p class="running_choice">Composez votre menu</p>
+          </li>
+          <li>
+            <i class="fas fa-store running_icon"></i>
+            <p class="running_choice">Dégustez au restaurant</p>
+          </li>
+        </ul>
+      </section>
+      <section class="restaurant">
+        <h2 class="restaurant_title">Restaurants</h2>
+        <a href="laPaletteDuGoût.html" class="card_link">
+          <figure class="card">
+            <img
+              src="Public/img/restaurants/La_palette_du_goût.jpg"
+              alt="image d'un plat posé sur une table"
+              class="card_img"
+            />
+            <span class="card_pin">Nouveau</span>
+            <figcaption class="card_content">
+              <h3 class="card_title">La palette du goût</h3>
+              <p class="card_subtitle">Menilmontant</p>
+              <div class="card_heart">
+                <i class="far fa-heart" class="card_heart_light"></i>
+                <i class="fas fa-heart" class="card_heart_dark"></i>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="laNoteEnchantee.html" class="card_link">
+          <figure class="card">
+            <img
+              src="Public/img/restaurants/la_note_enchantée.jpg"
+              alt="image d'un plat posé sur une table"
+              class="card_img"
+            />
+            <span class="card_pin">Nouveau</span>
+            <figcaption class="card_content">
+              <h3 class="card_title">La note enchantée</h3>
+              <p class="card_subtitle">Charonne</p>
+              <div class="card_heart">
+                <i class="far fa-heart" class="card_heart_light"></i>
+                <i class="fas fa-heart" class="card_heart_dark"></i>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="aLaFrançaise.html" class="card_link">
+          <figure class="card">
+            <img
+              src="Public/img/restaurants/à_la_française.jpg"
+              alt="image d'un plat posé sur une table"
+              class="card_img"
+            />
+            <figcaption class="card_content">
+              <h3 class="card_title">À la française</h3>
+              <p class="card_subtitle">Cité Rouge</p>
+              <div class="card_heart">
+                <i class="far fa-heart" class="card_heart_light"></i>
+                <i class="fas fa-heart" class="card_heart_dark"></i>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="leDéliceDesSens.html" class="card_link">
+          <figure class="card">
+            <img
+              src="Public/img/restaurants/Le_Delice_des_sens.jpg"
+              alt="image d'un plat posé sur une table"
+              class="card_img"
+            />
+            <figcaption class="card_content">
+              <h3 class="card_title">Le délice des sens</h3>
+              <p class="card_subtitle">Folie-Méricourt</p>
+              <div class="card_heart">
+                <i class="far fa-heart" class="card_heart_light"></i>
+                <i class="fas fa-heart" class="card_heart_dark"></i>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <p class="footer_title">Ohmyfood</p>
+      <ul>
+        <li>
+          <a href="#" class="footer_link">
+            <i class="fas fa-utensils"></i>
+            Proposer un restaurant
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer_link"
+            ><i class="far fa-handshake"></i>Devenir partenaire</a
+          >
+        </li>
+        <li>
+          <a href="#" class="footer_link">Mentions légales</a>
+        </li>
+        <li>
+          <a href="mailto:contact@ohmyfood.com" class="footer_link">contact</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

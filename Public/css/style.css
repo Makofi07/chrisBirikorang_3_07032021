@@ -1,3 +1,145 @@
+/*La font en css
+font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive;
+*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header_img {
+  width: 150px;
+  padding: 1em;
+}
+.header_location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #dfdede;
+  box-shadow: inset 1px 5px 5px 0px #a3a3a3;
+}
+.header_location_icon {
+  margin-right: 1.5em;
+}
+.header_content {
+  text-align: center;
+  background-color: #eae9e9;
+  width: 100%;
+}
+.header_cta {
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 10px 15px 10px 15px;
+  border-radius: 25px;
+  background-color: linear-gradient;
+  background: linear-gradient(135deg, #ff79da, #9356dc 80%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.running_tittle {
+  font-weight: 700;
+  padding-left: 0.5em;
+}
+.runninglists {
+  padding-left: 0;
+  margin: 0 auto;
+  width: 84%;
+}
+.running_list {
+  display: flex;
+  align-items: center;
+  background-color: #f4f1f1;
+  box-shadow: 0px 3px 5px 1px #bdbdbd;
+  padding: 10px 20px 10px 20px;
+  border-radius: 32px;
+  margin: 1.5em 0;
+  position: relative;
+}
+.running_list::before {
+  content: "1";
+  color: #fff;
+  position: absolute;
+  left: -10px;
+  background-color: #9356dc;
+  padding: 2px 10px 2px 10px;
+  border-radius: 150117px;
+}
+.running_list:nth-child(2)::before {
+  content: "2";
+}
+.running_list:nth-child(3)::before {
+  content: "3";
+}
+.running_icon {
+  margin: 0 1em;
+}
+.running_icon:hover {
+  color: #9356dc;
+  cursor: pointer;
+}
+
+.restaurant {
+  background-color: #f4f1f1;
+}
+.restaurant_title {
+  padding: 1em;
+}
+
+.card {
+  position: relative;
+}
+.card_link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.card_img {
+  width: 100%;
+  height: auto;
+}
+.card_pin {
+  position: absolute;
+  right: 13px;
+  top: 43px;
+  color: #19c399;
+  background-color: #99e2d0;
+  padding: 5px 15px;
+}
+
+.footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 0.5em;
+}
+.footer_title {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  padding-left: 0.75em;
+}
+.footer_lists {
+  list-style: none;
+}
+.footer_link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+.footer_icon {
+  margin-right: 0.5em;
+}
 
 /*# sourceMappingURL=style.css.map */

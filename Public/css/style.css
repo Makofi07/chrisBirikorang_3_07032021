@@ -7,7 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
   line-height: 1.5;
 }
 
@@ -51,11 +51,11 @@ body {
   text-decoration: none;
 }
 
-.running_tittle {
+.running_title {
   font-weight: 700;
   padding-left: 0.5em;
 }
-.runninglists {
+.running_lists {
   padding-left: 0;
   margin: 0 auto;
   width: 84%;
@@ -86,7 +86,7 @@ body {
   content: "3";
 }
 .running_icon {
-  margin: 0 1em;
+  margin: 0 1.25em;
 }
 .running_icon:hover {
   color: #9356dc;
@@ -94,6 +94,7 @@ body {
 }
 
 .restaurant {
+  height: 1300px;
   background-color: #f4f1f1;
 }
 .restaurant_title {
@@ -101,7 +102,12 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-bottom: 3em;
 }
 .card_link {
   text-decoration: none;
@@ -109,7 +115,10 @@ body {
 }
 .card_img {
   width: 100%;
-  height: auto;
+  height: calc(30vh - 150px);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 .card_pin {
   position: absolute;
@@ -118,6 +127,31 @@ body {
   color: #19c399;
   background-color: #99e2d0;
   padding: 5px 15px;
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
+}
+.card_content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0px 3px 5px 1px #bdbdbd;
+  padding: 0.5em 0.75em 0.75em 1em;
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
+  color: #000;
+  background-color: #fff;
+}
+.card_textcontent {
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
+}
+.card_title {
+  margin: 0;
+}
+.card_subtitle {
+  margin: 0;
+}
+.card_heart {
+  display: flex;
+  align-items: center;
 }
 
 .footer {
@@ -128,7 +162,7 @@ body {
 .footer_title {
   font-family: "Shrikhand", cursive;
   margin: 0;
-  padding-left: 0.75em;
+  padding-left: 2em;
 }
 .footer_lists {
   list-style: none;
@@ -136,7 +170,7 @@ body {
 .footer_link {
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
 }
 .footer_icon {
   margin-right: 0.5em;

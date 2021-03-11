@@ -6,6 +6,7 @@ font-family: 'Shrikhand', cursive;
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$clr-black: #000;
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -14,7 +15,7 @@ $color-tertiary: #99e2d0;
   flex-direction: $direction;
 }
 @mixin fontBody {
-  font-size: 18px;
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
 }
 
 body {
@@ -69,11 +70,11 @@ body {
 .running {
   //padding: 0.5em;
 
-  &_tittle {
+  &_title {
     font-weight: 700;
     padding-left: 0.5em;
   }
-  &lists {
+  &_lists {
     //padding: 0.5em;
     padding-left: 0;
     margin: 0 auto;
@@ -105,7 +106,7 @@ body {
     }
   }
   &_icon {
-    margin: 0 1em;
+    margin: 0 1.25em;
     &:hover {
       color: $color-primary;
       cursor: pointer;
@@ -114,6 +115,7 @@ body {
 }
 
 .restaurant {
+  height: 1300px;
   background-color: #f4f1f1;
   &_title {
     padding: 1em;
@@ -121,15 +123,24 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-bottom: 3em;
   &_link {
     text-decoration: none;
     cursor: pointer;
   }
   &_img {
     width: 100%;
-    height: auto;
+    height: calc(30vh - 150px);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
   }
+
   &_pin {
     position: absolute;
     right: 13px;
@@ -137,6 +148,31 @@ body {
     color: #19c399;
     background-color: #99e2d0;
     padding: 5px 15px;
+    @include fontBody;
+  }
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 3px 5px 1px #bdbdbd;
+    padding: 0.5em 0.75em 0.75em 1em;
+    @include fontBody;
+    color: $clr-black;
+    background-color: #fff;
+  }
+  &_textcontent {
+    @include fontBody;
+  }
+  &_title {
+    margin: 0;
+  }
+  &_subtitle {
+    margin: 0;
+  }
+  &_heart {
+    display: flex;
+    align-items: center;
   }
 }
 

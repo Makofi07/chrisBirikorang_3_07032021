@@ -153,6 +153,33 @@ body {
   display: flex;
   align-items: center;
 }
+.card_heartTest {
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+.card_heartTest::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #19c399;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.card_heartTest::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #9356dc;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
 
 .footer {
   background-color: #353535;
@@ -162,7 +189,7 @@ body {
 .footer_title {
   font-family: "Shrikhand", cursive;
   margin: 0;
-  padding-left: 2em;
+  padding-left: 1.5em;
 }
 .footer_lists {
   list-style: none;
@@ -174,6 +201,89 @@ body {
 }
 .footer_icon {
   margin-right: 0.5em;
+}
+
+.restaurantHeader {
+  margin-left: 2em;
+  position: relative;
+  margin-top: 1em;
+}
+.restaurantHeader_link {
+  color: #000;
+}
+.restaurantHeader_link--backgroundShadow {
+  background-color: #ffff;
+  padding: 0.5em;
+  border-radius: 220313px;
+  transition: all 500ms ease-out;
+}
+.restaurantHeader_link--backgroundShadow:hover {
+  background-color: #f2f2f2;
+}
+.restaurantHeader_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.restaurantPicture {
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 1em;
+  margin-top: -2.5em;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #f4f1f1;
+  font-size: clamp(0.8rem, 1.9vw, 1.5rem);
+}
+.menu_head {
+  display: flex;
+  justify-content: space-around;
+}
+.menu_title {
+  font-family: "Shrikhand", cursive;
+}
+
+.menu_starter_title {
+  border-bottom: 4px solid #99e2d0;
+  width: 35px;
+}
+
+.label {
+  display: flex;
+  align-items: last baseline;
+  background-color: #fff;
+  border-radius: 22px;
+  justify-content: space-between;
+  padding: 0.5em;
+  margin: 1em 0;
+  cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
+}
+
+.menu_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menu_btn_order {
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff79da, #9356dc 80%);
+  color: #fff;
+  margin: 2em 0 4em 0;
+  padding: 0.8em 3em;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px 2px #bdbdbd;
 }
 
 /*# sourceMappingURL=style.css.map */

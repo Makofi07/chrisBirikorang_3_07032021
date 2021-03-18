@@ -32,13 +32,24 @@
     <title>ohmyfood_Restaurant "La palette du goût"</title>
   </head>
   <body>
-    <header>
-      <a href="index.html">
-        <i class="fas fa-arrow-left"></i>
+    <header class="restaurantHeader">
+      <a
+        href="index.html"
+        class="restaurantHeader_link restaurantHeader_link--backgroundShadow"
+      >
+        <i class="fas fa-arrow-left backAccueil"></i>
       </a>
-      <img src="Public/img/logo/ohmyfood.png" alt="logo" class="header_img" />
+      <img
+        src="Public/img/logo/ohmyfood.png"
+        alt="logo"
+        class="header_img restaurantHeader_logo"
+      />
     </header>
-    <img src="Public/img/restaurants/La_palette_du_goût.jpg" alt="" />
+    <img
+      src="Public/img/restaurants/La_palette_du_goût.jpg"
+      alt="un plat servi à une personne à table"
+      class="restaurantPicture"
+    />
 
     <main class="menu">
       <div class="menu_head">
@@ -51,24 +62,32 @@
       <section class="menu_starter">
         <h2 class="menu_starter_title">Entrées</h2>
         <div class="label">
-          <h3 class="label_title">Fricassée d'escargot</h3>
-          <p class="label_subtitle">Au piment d'Espelette</p>
+          <div class="label_content">
+            <h3 class="label_title">Fricassée d'escargot</h3>
+            <p class="label_subtitle">Au piment d'Espelette</p>
+          </div>
           <span class="label_price">25€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
           </div>
         </div>
         <div class="label">
-          <h3 class="label_title">Foie gras de canard mi-cuit</h3>
-          <p class="label_subtitle">Et ses copeaux de truffe noire</p>
+          <div class="label_content">
+            <h3 class="label_title">Foie gras de canard mi-cuit</h3>
+            <p class="label_subtitle">Et ses copeaux de truffe noire</p>
+          </div>
           <span class="label_price">35€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
           </div>
         </div>
         <div class="label">
-          <h3 class="label_title">Oeuf au plat</h3>
-          <p class="label_subtitle">Assaisonné à la truffe sur lit de caviar</p>
+          <div class="label_content">
+            <h3 class="label_title">Oeuf au plat</h3>
+            <p class="label_subtitle">
+              Assaisonné à la truffe sur lit de caviar
+            </p>
+          </div>
           <span class="label_price">20€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
@@ -79,24 +98,32 @@
       <section class="menu_dish">
         <h2 class="menu_starter_title">Plats</h2>
         <div class="label">
-          <h3 class="label_title">Filet de boeuf aux herbes</h3>
-          <p class="label_subtitle">Accompagné de sa ribambelle de légumes</p>
+          <div class="label_content">
+            <h3 class="label_title">Filet de boeuf aux herbes</h3>
+            <p class="label_subtitle">Accompagné de sa ribambelle de légumes</p>
+          </div>
           <span class="label_price">40€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
           </div>
         </div>
         <div class="label">
-          <h3 class="label_title">Parmentier de queue de boeuf</h3>
-          <p class="label_subtitle">À la truffe noire sur sa purée de panais</p>
+          <div class="label_content">
+            <h3 class="label_title">Parmentier de queue de boeuf</h3>
+            <p class="label_subtitle">
+              À la truffe noire sur sa purée de panais
+            </p>
+          </div>
           <span class="label_price">35€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
           </div>
         </div>
         <div class="label">
-          <h3 class="label_title">Filet de turbot</h3>
-          <p class="label_subtitle">Aux agrumes</p>
+          <div class="label_content">
+            <h3 class="label_title">Filet de turbot</h3>
+            <p class="label_subtitle">Aux agrumes</p>
+          </div>
           <span class="label_price">44€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
@@ -107,26 +134,32 @@
       <section class="menu_dessert">
         <h2 class="menu_starter_title">Desserts</h2>
         <div class="label">
-          <h3 class="label_title">Paris-Brest</h3>
-          <p class="label_subtitle">Revisité</p>
+          <div class="label_content">
+            <h3 class="label_title">Paris-Brest</h3>
+            <p class="label_subtitle">Revisité</p>
+          </div>
           <span class="label_price">18€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
           </div>
         </div>
         <div class="label">
-          <h3 class="label_title">Macaron au chocolat d'exception</h3>
-          <p class="label_subtitle">Et glace à la vanille de Madagascar</p>
+          <div class="label_content">
+            <h3 class="label_title">Macaron au chocolat d'exception</h3>
+            <p class="label_subtitle">Et glace à la vanille de Madagascar</p>
+          </div>
           <span class="label_price">22€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
           </div>
         </div>
         <div class="label">
-          <h3 class="label_title">Mousse au chocolat</h3>
-          <p class="label_subtitle">
-            Au piment d'Espelette et à la truffe noire
-          </p>
+          <div class="label_content">
+            <h3 class="label_title">Mousse au chocolat</h3>
+            <p class="label_subtitle">
+              Au piment d'Espelette et à la truffe noire
+            </p>
+          </div>
           <span class="label_price">23€</span>
           <div class="label_actions">
             <span class="label_check"><i class="fas fa-check"></i></span>
@@ -134,7 +167,7 @@
         </div>
       </section>
       <div class="menu_btn">
-        <a href="#" class="menu_order">Commander</a>
+        <a href="#" class="menu_btn_order">Commander</a>
       </div>
     </main>
 

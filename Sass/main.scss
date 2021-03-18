@@ -174,6 +174,33 @@ body {
     display: flex;
     align-items: center;
   }
+  &_heartTest {
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #19c399;
+      height: 100%;
+      width: 100%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #9356dc;
+      height: 100%;
+      width: 100%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+    }
+  }
 }
 
 .footer {
@@ -183,7 +210,7 @@ body {
   &_title {
     font-family: "Shrikhand", cursive;
     margin: 0;
-    padding-left: 2em;
+    padding-left: 1.5em;
   }
   &_lists {
     list-style: none;
@@ -195,5 +222,100 @@ body {
   }
   &_icon {
     margin-right: 0.5em;
+  }
+}
+
+// = La Palette du Goût
+
+.restaurantHeader {
+  // @include flexCenter(row);
+  margin-left: 2em;
+  position: relative;
+  margin-top: 1em;
+  &_link {
+    color: #000;
+    //transition: ease-in-out 5sec;
+    //     &:hover{
+    //       background-color: #f2f2f2;
+    // border-radius: 150117pc;
+    // padding: 1em;
+    //     }
+  }
+  &_link--backgroundShadow {
+    background-color: #ffff;
+    padding: 0.5em;
+    border-radius: 220313px;
+    transition: all 500ms ease-out;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+  &_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+// .backAccueil:hover {
+// background-color: #f2f2f2;
+// padding: .5em;
+// border-radius: 220313px;
+
+// }
+.restaurantPicture {
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
+}
+// Partie principale du menu
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 1em;
+  margin-top: -2.5em;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #f4f1f1;
+  font-size: clamp(0.8rem, 1.9vw, 1.5rem);
+  &_head {
+    display: flex;
+    justify-content: space-around;
+  }
+  &_title {
+    font-family: "Shrikhand", cursive;
+  }
+}
+// ==Section Starter
+.menu_starter {
+  //margin-left: 1em;
+  &_title {
+    border-bottom: 4px solid $color-tertiary;
+    width: 35px;
+  }
+}
+.label {
+  display: flex;
+  align-items: last baseline;
+  background-color: #fff;
+  border-radius: 22px;
+  justify-content: space-between;
+  padding: 0.5em;
+  margin: 1em 0;
+  cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
+}
+.menu_btn {
+  @include flexCenter(column);
+  &_order {
+    text-decoration: none;
+    background: linear-gradient(135deg, #ff79da, #9356dc 80%);
+    color: #fff;
+    margin: 2em 0 4em 0;
+    padding: 0.8em 3em;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px 2px #bdbdbd;
   }
 }

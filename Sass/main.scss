@@ -363,7 +363,61 @@ body {
 /*Responsive Media Queries*/
 
 @media screen and (min-width: 1200px) {
-  /*Section Menu*/
+  /* Page D'accueil*/
+  main {
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+  }
+  .running {
+    flex: 1;
+    margin-top: 2em;
+  }
+  .restaurant {
+    flex: 2;
+    position: relative;
+    background-color: transparent;
+  }
+  .card_link {
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 8px;
+    width: 40%;
+    &:hover {
+      outline-width: 6px;
+      outline-color: #99e2d0;
+      outline-style: solid;
+      transform: scale(1.2);
+      z-index: 15;
+      &:not(:hover) {
+        transform: scale(0.52);
+      }
+    }
+    &_1 {
+      right: 17em;
+      top: 10em;
+    }
+    &_2 {
+      right: 30em;
+      top: 5em;
+      transform: rotate(12deg);
+      transform-origin: left top;
+    }
+    &_3 {
+      right: 1em;
+      top: 12em;
+      transform: rotate(-15deg);
+      transform-origin: center right;
+    }
+    &_4 {
+      right: 30em;
+      top: 26em;
+      transform: rotate(20deg);
+    }
+  }
+
+  /*Pages Menu*/
   .restaurantPicture {
     height: 500px;
   }

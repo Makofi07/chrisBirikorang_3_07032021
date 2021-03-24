@@ -312,11 +312,18 @@ body {
     flex: 1;
     margin-top: 2em;
   }
+  .running_title {
+    text-align: center;
+  }
 
   .restaurant {
     flex: 2;
+    height: 800px;
     position: relative;
     background-color: transparent;
+  }
+  .restaurant_title {
+    text-align: center;
   }
 
   .card_link {
@@ -337,25 +344,29 @@ body {
     transform: scale(0.52);
   }
   .card_link_1 {
-    right: 17em;
-    top: 10em;
+    right: 7em;
+    top: 7em;
+    transform: rotate(12deg);
+    transform-origin: top left;
+    z-index: 11;
   }
   .card_link_2 {
-    right: 30em;
-    top: 5em;
-    transform: rotate(12deg);
-    transform-origin: left top;
+    right: 20em;
+    top: 10em;
+    transform: rotate(38deg);
+    transform-origin: top;
   }
   .card_link_3 {
-    right: 1em;
-    top: 12em;
-    transform: rotate(-15deg);
-    transform-origin: center right;
+    right: 15em;
+    top: 21em;
+    transform: rotate(-12deg);
+    transform-origin: top right;
   }
   .card_link_4 {
-    right: 30em;
-    top: 26em;
-    transform: rotate(20deg);
+    right: 32em;
+    top: 21em;
+    transform: rotate(17deg);
+    transform-origin: top left;
   }
 
   /*Pages Menu*/

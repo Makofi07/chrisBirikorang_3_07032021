@@ -319,15 +319,31 @@ body {
   .menu_wrapper::before {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 30%;
+    height: 30%;
     top: -5px;
     left: -5px;
-    border-top: 2px solid #9356dc;
-    border-left: 2px solid #9356dc;
+    border-top: 5px solid #9356dc;
+    border-left: 5px solid #9356dc;
+    transition: all 0.5s;
+  }
+  .menu_wrapper:hover::after {
+    height: 70%;
+    width: 70%;
+  }
+  .menu_wrapper::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    bottom: 5px;
+    right: 5px;
+    border-bottom: 5px solid #9356dc;
+    border-right: 5px solid #9356dc;
+    transition: all 0.25s;
   }
 
-  section {
+  .menu_width {
     max-width: 25%;
   }
 }

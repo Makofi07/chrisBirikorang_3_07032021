@@ -38,11 +38,17 @@ body {
     width: 100%;
     background-color: #dfdede;
     box-shadow: inset 1px 5px 5px 0px #a3a3a3;
+    padding: 0.5em;
   }
   &_location_icon {
     margin-right: 1.5em;
+    margin-left: 4em;
   }
   &_location_place {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
   }
   &_content {
     text-align: center;
@@ -66,10 +72,12 @@ body {
     text-decoration: none;
     &:hover {
       box-shadow: 0px 0px 7px 6px #c6a4c2;
+      /* propriété permettant d'inverser color et background mais avec Darken en sass je ne sais pas faire
       background: linear-gradient(135deg, #ff79da, #9356dc 80%);
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;
+      color: transparent;*/
+      background: darken($color-primary, 10%);
     }
   }
 }
@@ -96,6 +104,9 @@ body {
     border-radius: 32px;
     margin: 1.5em 0;
     position: relative;
+    &:hover {
+      background: darken(#f4f1f1, 5%);
+    }
     &::before {
       content: "1";
       color: #fff;
@@ -314,7 +325,7 @@ body {
   font-size: clamp(0.8rem, 1.9vw, 1.5rem);
   &_head {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &_title {
     font-family: "Shrikhand", cursive;
@@ -337,6 +348,13 @@ body {
   padding: 0.5em;
   margin: 1em 0;
   cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
+  &label_content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+      width: 60%;
+    }
+  }
 }
 .menu_btn {
   @include flexCenter(column);
@@ -351,8 +369,9 @@ body {
     box-shadow: 0px 2px 5px 2px #bdbdbd;
     transition: transform 0.3s ease-in-out;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.05);
       text-transform: uppercase;
+      background: darken($color-secondary, 10%);
     }
     &:active {
       box-shadow: 0px 0px 7px 6px #c6a4c2;

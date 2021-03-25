@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*La font en css
 font-family: 'Roboto', sans-serif;
 font-family: 'Shrikhand', cursive;
@@ -29,9 +30,17 @@ body {
   width: 100%;
   background-color: #dfdede;
   box-shadow: inset 1px 5px 5px 0px #a3a3a3;
+  padding: 0.5em;
 }
 .header_location_icon {
   margin-right: 1.5em;
+  margin-left: 4em;
+}
+.header_location_place {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
 }
 .header_content {
   text-align: center;
@@ -52,10 +61,12 @@ body {
 }
 .header_cta:hover {
   box-shadow: 0px 0px 7px 6px #c6a4c2;
+  /* propriété permettant d'inverser color et background mais avec Darken en sass je ne sais pas faire
   background: linear-gradient(135deg, #ff79da, #9356dc 80%);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: transparent;*/
+  background: #782cd3;
 }
 
 .running_title {
@@ -76,6 +87,9 @@ body {
   border-radius: 32px;
   margin: 1.5em 0;
   position: relative;
+}
+.running_list:hover {
+  background: #e9e3e3;
 }
 .running_list::before {
   content: "1";
@@ -252,7 +266,7 @@ body {
 }
 .menu_head {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .menu_title {
   font-family: "Shrikhand", cursive;
@@ -273,6 +287,13 @@ body {
   margin: 1em 0;
   cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
 }
+.labellabel_content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.labellabel_content:hover {
+  width: 60%;
+}
 
 .menu_btn {
   display: flex;
@@ -292,8 +313,9 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 .menu_btn_order:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   text-transform: uppercase;
+  background: #ff46cc;
 }
 .menu_btn_order:active {
   box-shadow: 0px 0px 7px 6px #c6a4c2;

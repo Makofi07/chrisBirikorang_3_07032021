@@ -38,7 +38,7 @@ body {
     width: 100%;
     background-color: #dfdede;
     box-shadow: inset 1px 5px 5px 0px #a3a3a3;
-    padding: 0.5em;
+    padding: 0.5em 0;
   }
   &_location_icon {
     margin-right: 1.5em;
@@ -87,7 +87,7 @@ body {
 
   &_title {
     font-weight: 700;
-    padding-left: 0.5em;
+    padding-left: 1em;
   }
   &_lists {
     //padding: 0.5em;
@@ -307,7 +307,7 @@ body {
 .restaurantPicture {
   width: 100%;
   object-fit: cover;
-  height: auto;
+  height: 250px;
   margin-top: 1em;
 }
 // Partie principale du menu
@@ -316,7 +316,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 1em;
-  margin-top: -2.5em;
+  margin-top: -4.5em;
   position: relative;
   z-index: 1;
   border-top-left-radius: 25px;
@@ -341,20 +341,100 @@ body {
 }
 .label {
   display: flex;
-  align-items: last baseline;
   background-color: #fff;
   border-radius: 22px;
   justify-content: space-between;
-  padding: 0.5em;
+  //padding: 0.5em;
   margin: 1em 0;
   cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
-  &label_content {
+  transition: width 300ms 100ms linear, translateX 300ms 100ms linear;
+  position: relative;
+  &:hover &_content {
+    width: 60%;
+  }
+  &:hover &_actions {
+    transform: scaleX(1);
+  }
+  &:hover &_check {
+    transform: rotate(360deg);
+  }
+  &:hover &_price {
+    transform: translateX(-72px);
+  }
+  &_content {
+    padding-left: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
-    &:hover {
+    white-space: nowrap;
+    transition: width 300ms 100ms linear;
+    /*&:hover {
       width: 60%;
+    }*/
+  }
+  &_title {
+    margin: 0;
+    padding: 0.5em 0 0 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*&:hover {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }*/
+  }
+  &_subtitle {
+    margin: 0;
+    padding: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*&:hover {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }*/
+  }
+  &_price {
+    display: flex;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+    transition: transform 300ms 100ms linear;
+    /*&:hover {
+      transform: translateX(px);
+    }*/
+  }
+  &_actions {
+    display: flex;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #99e2d0;
+    width: 22%;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms 100ms linear;
+    &:hover {
+      transform: scaleX(1);
     }
   }
+  &_check {
+    align-self: center;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    padding: 5px;
+    transform: rotate(0deg);
+    transition: transform 300ms 100ms linear;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
+.fa-check {
+  color: #99e2d0;
 }
 .menu_btn {
   @include flexCenter(column);

@@ -35,15 +35,21 @@
   <body>
     <div class="spinner-loader"></div>
     <header class="header">
-      <img src="Public/img/logo/ohmyfood.png" alt="logo" class="header_img" />
+      <div class="header_divImg">
+        <img src="Public/img/logo/ohmyfood.png" alt="logo" class="header_img" />
+      </div>
       <div class="header_location">
-        <i class="fas fa-map-marker-alt header_location_icon"></i>
-        <input
-          type="text"
-          name="location"
-          class="header_location_place"
-          placeholder="Paris, Belleville"
-        />
+        <div class="header_location_divIcon">
+          <i class="fas fa-map-marker-alt header_location_icon"></i>
+        </div>
+        <div class="header_location_divPlace">
+          <input
+            type="text"
+            name="location"
+            class="header_location_place"
+            placeholder="Paris, Belleville"
+          />
+        </div>
       </div>
       <div class="header_content">
         <h2 class="header_title">

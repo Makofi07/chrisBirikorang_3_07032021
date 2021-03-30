@@ -224,6 +224,8 @@ body {
   margin-left: 2em;
   position: relative;
   margin-top: 1em;
+  opacity: 0;
+  animation: Appear 0.9s 0.4s ease-out forwards;
 }
 .restaurantHeader_link {
   color: #000;
@@ -249,6 +251,8 @@ body {
   object-fit: cover;
   height: 250px;
   margin-top: 1em;
+  /*opacity: 0;
+  animation: Appear 0.9s 0.6s ease-out forwards;*/
 }
 
 .menu {
@@ -263,6 +267,8 @@ body {
   border-top-right-radius: 25px;
   background-color: #f4f1f1;
   font-size: clamp(0.8rem, 1.9vw, 1.5rem);
+  /*opacity: 0;
+  animation: Appear 0.4s 0.9s ease-out forwards;*/
 }
 .menu_head {
   display: flex;
@@ -286,7 +292,17 @@ body {
   cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
   transition: width 300ms 100ms ease-in-out, translateX 300ms 100ms ease-in-out;
   position: relative;
-  animation: Appear 0.6s;
+  /*transform: translateY(-30px);*/
+  opacity: 0;
+  animation: Appear-on 0.9s 0.3s ease-out, Appear 0.4s ease-out forwards;
+}
+@keyframes Appear-on {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .label--d1 {
   animation-delay: 200ms;
@@ -399,13 +415,19 @@ body {
 }
 
 @keyframes Appear {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/*@keyframes Appear {
   0% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
   }
-}
+}*/
 .fa-check {
   color: #99e2d0;
 }
@@ -437,6 +459,24 @@ body {
 }
 
 /*Responsive Media Queries*/
+/* Mq Pour les écrans supérieur à une résolution de 767px*/
+@media screen and (min-width: 767px) {
+  /* Page d'acceuil*/
+  .restaurantPicture {
+    height: 350px;
+    object-position: 0 -95px;
+  }
+
+  /*Pages Menu*/
+  .menu {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+  }
+  .menu_wrapper {
+    font-size: clamp(1rem, 1.2vw, 2.5rem);
+  }
+}
+/* Mq Pour les écrans supérieur à une résolution de 1200px*/
 @media screen and (min-width: 1200px) {
   /* Page D'accueil*/
   main {
@@ -519,6 +559,7 @@ body {
   }
   .menu_head {
     margin-top: 1.5em;
+    padding: 0 5em;
   }
   .menu_wrapper {
     display: flex;
@@ -561,6 +602,8 @@ body {
   .menu_width {
     max-width: 25%;
   }
+
+  /* Footer*/
 }
 
 /*# sourceMappingURL=style.css.map */

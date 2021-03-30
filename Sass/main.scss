@@ -403,8 +403,8 @@ body {
   object-fit: cover;
   height: 250px;
   margin-top: 1em;
-  /*opacity: 0;
-  animation: Appear 0.9s 0.6s ease-out forwards;*/
+  opacity: 0;
+  animation: Appear 0.9s 0.6s ease-out forwards;
 }
 // Partie principale du menu
 .menu {
@@ -419,8 +419,9 @@ body {
   border-top-right-radius: 25px;
   background-color: #f4f1f1;
   font-size: clamp(0.8rem, 1.9vw, 1.5rem);
-  /*opacity: 0;
-  animation: Appear 0.4s 0.9s ease-out forwards;*/
+  /*transform: translateY(50px);
+  opacity: 0;
+  animation: Appear 0.1s 0.9s ease-out forwards;*/
   &_head {
     display: flex;
     justify-content: space-between;
@@ -449,7 +450,7 @@ body {
   position: relative;
   /*transform: translateY(-30px);*/
   opacity: 0;
-  animation: Appear-on 0.9s 0.3s ease-out, Appear 0.4s ease-out forwards;
+  animation: Appear-on 0.4s 1s ease-out, Appear 0.4s ease-out forwards;
 
   @keyframes Appear-on {
     0% {
@@ -488,7 +489,7 @@ body {
     animation-delay: 600ms;
   }
   &:hover &_content {
-    width: 70%;
+    width: 80%;
   }
   * &:hover &_actions {
     transform: scaleX(1);
@@ -497,7 +498,7 @@ body {
     transform: rotate(360deg);
   }
   &:hover &_price {
-    transform: translateX(-70px);
+    transform: translateX(-50px);
   }
   &_content {
     padding-left: 1em;
@@ -514,26 +515,28 @@ body {
     padding: 0.5em 0 0 0.5em;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*&:hover {
+    &:hover {
       overflow: hidden;
       text-overflow: ellipsis;
-    }*/
+    }
   }
   &_subtitle {
     margin: 0;
     padding: 0.5em;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*&:hover {
+    &:hover {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-    }*/
+    }
   }
   &_price {
     display: flex;
     font-weight: 700;
     margin-bottom: 0.5em;
+    /*align-self: end;
+    margin-right: -7em;*/
     position: absolute;
     bottom: 0;
     right: 2em;
@@ -603,7 +606,8 @@ body {
     border-radius: 25px;
     box-shadow: 0px 2px 5px 2px #bdbdbd;
     transition: transform 0.3s ease-in-out;
-    &:hover {
+    &:hover,
+    :active {
       transform: scale(1.05);
       text-transform: uppercase;
       background: darken($color-secondary, 10%);
@@ -615,6 +619,19 @@ body {
 }
 
 /*Responsive Media Queries*/
+
+/* Mq Pour les écrans dont la largeur est supérieur à 600px*/
+
+@media screen and (min-width: 600px) {
+  /* Page Menu*/
+
+  .menu_wrapper {
+    font-size: clamp(1rem, 1.2vw, 2.5rem);
+  }
+  .label:hover .label_price {
+    transform: translateX(-95px);
+  }
+}
 
 /* Mq Pour les écrans dont la largeur est supérieur à 767px*/
 @media screen and (min-width: 767px) {
@@ -636,7 +653,7 @@ body {
   }
 }
 /* Mq Pour les écrans dont la largeur est  supérieur à 991px*/
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1200px) {
   /* Page D'accueil*/
   body {
     //background-color: lightpink;
@@ -714,7 +731,8 @@ body {
   .menu {
     border-top-left-radius: 75px;
     border-top-right-radius: 75px;
-    font-size: clamp(1rem, 1.2vw, 2.5rem);
+    //font-size: clamp(1rem, 1.2vw, 2.5rem);
+    font-size: clamp(0.8rem, 1.9vw, 1.5rem);
     &_head {
       margin-top: 1.5em;
       padding: 0 5em;
@@ -758,8 +776,18 @@ body {
     }
   }
   .menu_width {
-    max-width: 25%;
+    max-width: 33%;
+  }
+  .label_price {
+    right: 1em;
+  }
+  .label:hover .label_price {
+    transform: translateX(-58px);
   }
 
-  /* Footer*/
+  @media screen and (min-width: 1400px) {
+    .label:hover .label_price {
+      transform: translateX(-60px);
+    }
+  }
 }

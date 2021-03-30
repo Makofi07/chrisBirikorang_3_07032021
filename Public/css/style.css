@@ -12,6 +12,87 @@ body {
   line-height: 1.5;
 }
 
+/*  Le Load-Spiner */
+.spinner_loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: $color-primary;*/
+  background-color: #102626;
+  animation: loader 0.6s 1.55s both;
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+.spinner_loader_content {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #0d2323;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    box-shadow: 0 0 10px #ff79da, 0 0 20px #ff79da, 0 0 30px #ff79da, 0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0, 0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner_loader_content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(153, 226, 208, 0.4));
+  background-size: 100px 180px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.spinner_loader_content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 45%;
+  /*trasnform: translateX(-10%);*/
+  width: 25px;
+  height: 25px;
+  background: #99e2d0;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px #99e2d0, 0 0 20px #99e2d0, 0 0 30px #99e2d0, 0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0, 0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
+}
+.spinner_loader_span {
+  position: absolute;
+  transform: translate -50%, -50%;
+  top: 25px;
+  left: 25px;
+  bottom: 0px;
+  width: 150px;
+  height: 150px;
+  background: #102626;
+  border-radius: 50%;
+}
+
+/*  Page d'Accueil*/
 .header {
   display: flex;
   justify-content: center;
@@ -459,7 +540,7 @@ body {
 }
 
 /*Responsive Media Queries*/
-/* Mq Pour les écrans supérieur à une résolution de 767px*/
+/* Mq Pour les écrans dont la largeur est supérieur à 767px*/
 @media screen and (min-width: 767px) {
   /* Page d'acceuil*/
   .restaurantPicture {
@@ -476,8 +557,8 @@ body {
     font-size: clamp(1rem, 1.2vw, 2.5rem);
   }
 }
-/* Mq Pour les écrans supérieur à une résolution de 1200px*/
-@media screen and (min-width: 1200px) {
+/* Mq Pour les écrans dont la largeur est  supérieur à 991px*/
+@media screen and (min-width: 991px) {
   /* Page D'accueil*/
   main {
     display: flex;

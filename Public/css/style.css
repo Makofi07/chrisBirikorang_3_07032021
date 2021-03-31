@@ -26,7 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   /*background-color: $color-primary;*/
-  background-color: #102626;
+  background-color: #f1f1f1;
   animation: loader 0.6s 1.55s both;
 }
 @keyframes loader {
@@ -48,7 +48,9 @@ body {
     transform: rotate(0deg);
   }
   30% {
-    box-shadow: 0 0 10px #ff79da, 0 0 20px #ff79da, 0 0 30px #ff79da, 0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0, 0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
+    box-shadow: 0 0 10px #ff79da, 0 0 20px #ff79da, 0 0 30px #ff79da,
+      0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0,
+      0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
   }
   100% {
     transform: rotate(360deg);
@@ -78,7 +80,9 @@ body {
   background: #99e2d0;
   border-radius: 50%;
   z-index: 10;
-  box-shadow: 0 0 10px #99e2d0, 0 0 20px #99e2d0, 0 0 30px #99e2d0, 0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0, 0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
+  box-shadow: 0 0 10px #99e2d0, 0 0 20px #99e2d0, 0 0 30px #99e2d0,
+    0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0,
+    0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
 }
 .spinner_loader_span {
   position: absolute;
@@ -133,7 +137,6 @@ body {
   margin-bottom: 2em;
   padding: 10px 15px 10px 15px;
   border-radius: 25px;
-  background-color: linear-gradient;
   background: linear-gradient(135deg, #ff79da, #9356dc 80%);
   color: #fff;
   cursor: pointer;

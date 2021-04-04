@@ -595,7 +595,7 @@ body {
   }
 }
 /* Mq Pour les écrans dont la largeur est  supérieur à 991px*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   /* Page D'accueil*/
   body {
     //background-color: lightpink;
@@ -716,5 +716,17 @@ body {
         transition: all 0.25s;
       }
     }
+    &_starter {
+      width: 30%;
+    }
+    &_dish {
+      width: 30%;
+    }
+    &_dessert {
+      width: 30%;
+    }
   }
+}
+
+@media screen and (min-width: 1400px) {
 }

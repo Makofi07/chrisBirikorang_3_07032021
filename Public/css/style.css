@@ -538,7 +538,7 @@ body {
   }
 }
 /* Mq Pour les écrans dont la largeur est  supérieur à 991px*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 991px) {
   /* Page D'accueil*/
   main {
     display: flex;
@@ -659,6 +659,15 @@ body {
     border-bottom: 5px solid #9356dc;
     border-right: 5px solid #9356dc;
     transition: all 0.25s;
+  }
+  .menu_starter {
+    width: 30%;
+  }
+  .menu_dish {
+    width: 30%;
+  }
+  .menu_dessert {
+    width: 30%;
   }
 }
 

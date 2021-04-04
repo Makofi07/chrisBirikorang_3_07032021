@@ -16,6 +16,9 @@ $clr-black: #000;
 @mixin fontBody {
   font-size: clamp(1rem, 1.2vw, 2.5rem);
 }
+@mixin menu_width {
+  width: 30%;
+}
 
 /* ---  = BODY --- */
 body {
@@ -717,13 +720,16 @@ body {
       }
     }
     &_starter {
-      width: 30%;
+      @include menu_width;
+      //width: 30%;
     }
     &_dish {
-      width: 30%;
+      @include menu_width;
+      //width: 30%;
     }
     &_dessert {
-      width: 30%;
+      @include menu_width;
+      // width: 30%;
     }
   }
 }

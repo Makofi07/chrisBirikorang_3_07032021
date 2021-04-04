@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/*La font en css
-font-family: 'Roboto', sans-serif;
-font-family: 'Shrikhand', cursive;
-*/
+/* --- GENERALITES --- */
+/**    @variables   **/
+/**       @mixin   **/
+/* ---  = BODY --- */
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 }
 
-/*  Le Load-Spiner */
+/**   @subsection Load-Spiner   **/
 .spinner_loader {
   position: fixed;
   height: 100%;
@@ -25,7 +25,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: $color-primary;*/
   background-color: #f1f1f1;
   animation: loader 0.6s 1.55s both;
 }
@@ -48,9 +47,7 @@ body {
     transform: rotate(0deg);
   }
   30% {
-    box-shadow: 0 0 10px #ff79da, 0 0 20px #ff79da, 0 0 30px #ff79da,
-      0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0,
-      0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
+    box-shadow: 0 0 10px #ff79da, 0 0 20px #ff79da, 0 0 30px #ff79da, 0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0, 0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
   }
   100% {
     transform: rotate(360deg);
@@ -74,19 +71,19 @@ body {
   position: absolute;
   top: 0;
   left: 45%;
-  /*trasnform: translateX(-10%);*/
   width: 25px;
   height: 25px;
   background: #99e2d0;
   border-radius: 50%;
   z-index: 10;
-  box-shadow: 0 0 10px #99e2d0, 0 0 20px #99e2d0, 0 0 30px #99e2d0,
-    0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0,
-    0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
+  box-shadow: 0 0 10px #99e2d0, 0 0 20px #99e2d0, 0 0 30px #99e2d0, 0 0 40px #99e2d0, 0 0 50px #99e2d0, 0 0 60px #99e2d0, 0 0 70px #99e2d0, 0 0 80px #99e2d0, 0 0 90px #99e2d0, 0 0 100px #99e2d0;
 }
 .spinner_loader_span {
   position: absolute;
-  transform: translate -50%, -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   top: 25px;
   left: 25px;
   bottom: 0px;
@@ -96,7 +93,7 @@ body {
   border-radius: 50%;
 }
 
-/*  Page d'Accueil*/
+/*  --- = PAGE D'ACCUEIL --- */
 .header {
   display: flex;
   justify-content: center;
@@ -282,6 +279,7 @@ body {
   opacity: 1;
 }
 
+/*  --- = FOOTER  ---  */
 .footer {
   background-color: #353535;
   color: #fff;
@@ -304,6 +302,8 @@ body {
   margin-right: 0.5em;
 }
 
+/* ****************************  */
+/*  --- = PAGE MENU  ---*/
 .restaurantHeader {
   margin-left: 2em;
   position: relative;
@@ -369,10 +369,14 @@ body {
 }
 
 .label {
+  background-color: white;
+  margin: 9px 0;
+  border-radius: 15px;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.13);
+  padding: 12px;
+  overflow: hidden;
+  max-width: 100%;
   display: flex;
-  background-color: #fff;
-  border-radius: 22px;
-  justify-content: space-between;
   margin: 1em 0;
   cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
   transition: width 300ms 100ms ease-in-out, translateX 300ms 100ms ease-in-out;
@@ -416,89 +420,59 @@ body {
 .label--d9 {
   animation-delay: 600ms;
 }
-.label:hover .label_content {
-  width: 80%;
-}
-* .label:hover .label_actions {
-  transform: scaleX(1);
+.label:hover .label_actions {
+  margin-right: -12px;
 }
 .label:hover .label_check {
   transform: rotate(360deg);
 }
-.label:hover .label_price {
-  transform: translateX(-50px);
-}
 .label_content {
-  padding-left: 1em;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex: 1;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 1em;
   transition: width 3000ms 100ms ease-in-out;
-  /* &:hover {
-    width: 50%;
-  }*/
 }
 .label_title {
   margin: 0;
-  padding: 0.5em 0 0 0.5em;
-  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
-}
-.label_title:hover {
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .label_subtitle {
   margin: 0;
-  padding: 0.5em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.label_subtitle:hover {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .label_price {
-  display: flex;
   font-weight: 700;
-  margin-bottom: 0.5em;
-  /*align-self: end;
-  margin-right: -7em;*/
-  position: absolute;
-  bottom: 0;
-  right: 2em;
+  display: flex;
+  align-items: flex-end;
   transition: transform 300ms 100ms ease-in-out;
-  /*&:hover {
-    transform: translateX(px);
-  }*/
 }
 .label_actions {
-  display: flex;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   background-color: #99e2d0;
-  width: 22%;
-  justify-content: center;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
   align-items: center;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 300ms 100ms ease-in-out;
-}
-.label_actions:hover {
-  transform: scaleX(1);
+  justify-content: center;
+  transition-duration: 0.5s;
 }
 .label_check {
-  align-self: center;
+  height: 1.6rem;
+  width: 1.6rem;
   background-color: #fff;
-  border-radius: 50%;
   display: flex;
-  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
   transform: rotate(0deg);
   transition: transform 300ms 100ms ease-in-out;
-}
-.label_check:hover {
-  transform: rotate(360deg);
 }
 
 @keyframes Appear {
@@ -507,14 +481,6 @@ body {
     transform: none;
   }
 }
-/*@keyframes Appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}*/
 .fa-check {
   color: #99e2d0;
 }
@@ -546,16 +512,12 @@ body {
   box-shadow: 0px 0px 7px 6px #c6a4c2;
 }
 
-/*Responsive Media Queries*/
+/*  --- = MEDIA QUERIES  ---  */
 /* Mq Pour les écrans dont la largeur est supérieur à 600px*/
 @media screen and (min-width: 600px) {
   /* Page Menu*/
   .menu_wrapper {
     font-size: clamp(1rem, 1.2vw, 2.5rem);
-  }
-
-  .label:hover .label_price {
-    transform: translateX(-95px);
   }
 }
 /* Mq Pour les écrans dont la largeur est supérieur à 767px*/
@@ -631,6 +593,7 @@ body {
     top: 10em;
     transform: rotate(38deg);
     transform-origin: top;
+    z-index: 12;
   }
   .card_link_3 {
     right: 15em;
@@ -696,23 +659,6 @@ body {
     border-bottom: 5px solid #9356dc;
     border-right: 5px solid #9356dc;
     transition: all 0.25s;
-  }
-
-  .menu_width {
-    max-width: 33%;
-  }
-
-  .label_price {
-    right: 1em;
-  }
-
-  .label:hover .label_price {
-    transform: translateX(-58px);
-  }
-}
-@media screen and (min-width: 1200px) and (min-width: 1400px) {
-  .label:hover .label_price {
-    transform: translateX(-60px);
   }
 }
 

@@ -506,7 +506,7 @@ body {
 .menu_btn_order :active {
   transform: scale(1.05);
   text-transform: uppercase;
-  background: #ff46cc;
+  background: #a16be0;
 }
 .menu_btn_order:active {
   box-shadow: 0px 0px 7px 6px #c6a4c2;
@@ -680,13 +680,13 @@ body {
     border-right: 5px solid #9356dc;
     transition: all 0.25s;
   }
-  .menu_starter {
+  .menu_starter--width {
     width: 30%;
   }
-  .menu_dish {
+  .menu_dish--width {
     width: 30%;
   }
-  .menu_dessert {
+  .menu_dessert--width {
     width: 30%;
   }
 }

@@ -263,7 +263,7 @@ body {
   position: absolute;
   opacity: 0;
 }
-.card_heart_dark:hover {
+.card_heart_dark:active {
   opacity: 1;
   background-image: linear-gradient(135deg, #ff79da, #9356dc 80%);
   -webkit-background-clip: text;
@@ -275,7 +275,7 @@ body {
 .card_heart_light {
   position: absolute;
 }
-.card_heart_light:hover {
+.card_heart_light:active {
   opacity: 1;
 }
 
@@ -606,6 +606,26 @@ body {
     top: 21em;
     transform: rotate(17deg);
     transform-origin: top left;
+  }
+
+  .card_heart_dark {
+    position: absolute;
+    opacity: 0;
+  }
+  .card_heart_dark:hover {
+    opacity: 1;
+    background-image: linear-gradient(135deg, #ff79da, #9356dc 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-transition: 0.9s;
+    transition: 0.5s;
+  }
+  .card_heart_dark_heart_light {
+    position: absolute;
+  }
+  .card_heart_dark_heart_light:hover {
+    opacity: 1;
   }
 
   /*Pages Menu*/

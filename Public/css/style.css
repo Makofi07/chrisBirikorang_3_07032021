@@ -2,6 +2,7 @@
 /* --- GENERALITES --- */
 /**    @variables   **/
 /**       @mixin   **/
+/**       @mixin   **/
 /* ---  = BODY --- */
 body {
   margin: 0;
@@ -379,7 +380,7 @@ body {
   display: flex;
   margin: 1em 0;
   cursor: url("/Public/img/mickey_mouse_handCursor.png"), pointer;
-  transition: width 300ms 100ms ease-in-out, translateX 300ms 100ms ease-in-out;
+  transition: width 300ms 100ms ease-in-out;
   position: relative;
   /*transform: translateY(-30px);*/
   opacity: 0;

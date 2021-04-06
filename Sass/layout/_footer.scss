@@ -1,0 +1,23 @@
+/*  --- = FOOTER  ---  */
+
+.footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 0.5em;
+  &_title {
+    font-family: "Shrikhand", cursive;
+    margin: 0;
+    padding-left: 1.5em;
+  }
+  &_lists {
+    list-style: none;
+  }
+  &_link {
+    text-decoration: none;
+    color: #fff;
+    @include fontBody;
+  }
+  &_icon {
+    margin-right: 0.5em;
+  }
+}

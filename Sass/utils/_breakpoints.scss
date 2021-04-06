@@ -1,0 +1,187 @@
+/*  --- = MEDIA QUERIES  ---  */
+
+/* Mq Pour les écrans dont la largeur est supérieur à 600px*/
+
+@media screen and (min-width: 600px) {
+  /* Page Menu*/
+
+  .menu_wrapper {
+    @include fontBody;
+  }
+}
+
+/* Mq Pour les écrans dont la largeur est supérieur à 767px*/
+@media screen and (min-width: 767px) {
+  /* Page d'acceuil*/
+
+  .restaurantPicture {
+    height: 350px;
+    object-position: 0 -95px;
+  }
+  /*Pages Menu*/
+  .menu {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    &_wrapper {
+      @include fontBody;
+    }
+  }
+}
+/* Mq Pour les écrans dont la largeur est  supérieur à 991px*/
+@media screen and (min-width: 991px) {
+  /* Page D'accueil*/
+
+  main {
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+  }
+  .running {
+    flex: 1;
+    margin-top: 2em;
+    &_title {
+      text-align: center;
+    }
+  }
+
+  .restaurant {
+    flex: 2;
+    height: 800px;
+    position: relative;
+    background-color: transparent;
+    &_title {
+      text-align: center;
+    }
+  }
+
+  .card_link {
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 8px;
+    width: 40%;
+    &:hover {
+      outline-width: 6px;
+      outline-color: $color-tertiary;
+      outline-style: solid;
+      transform: scale(1.2);
+      z-index: 15;
+      &:not(:hover) {
+        transform: scale(0.52);
+      }
+    }
+    &_1 {
+      right: 7em;
+      top: 7em;
+      transform: rotate(12deg);
+      transform-origin: top left;
+      z-index: 11;
+    }
+    &_2 {
+      right: 20em;
+      top: 10em;
+      transform: rotate(38deg);
+      transform-origin: top;
+      z-index: 12;
+    }
+    &_3 {
+      right: 15em;
+      top: 21em;
+      transform: rotate(-12deg);
+      transform-origin: top right;
+    }
+    &_4 {
+      right: 32em;
+      top: 21em;
+      transform: rotate(17deg);
+      transform-origin: top left;
+    }
+  }
+  .card_heart_dark {
+    position: absolute;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      background-image: linear-gradient(
+        135deg,
+        $color-secondary,
+        $color-primary 80%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-transition: 0.9s;
+      transition: 0.5s;
+    }
+    &_heart_light {
+      position: absolute;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  /*Pages Menu*/
+  .restaurantPicture {
+    height: 500px;
+    object-position: 0 -350px;
+  }
+  .menu {
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    font-size: clamp(0.8rem, 1.9vw, 1.5rem);
+    &_head {
+      margin-top: 1.5em;
+      padding: 0 5em;
+    }
+    &_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      position: relative;
+      padding: 2em;
+      &:hover::before {
+        height: 30%;
+        width: 15%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 5%;
+        height: 10%;
+        top: -5px;
+        left: -5px;
+        border-top: 5px solid $color-primary;
+        border-left: 5px solid $color-primary;
+        transition: all 0.5s;
+      }
+      &:hover::after {
+        height: 30%;
+        width: 15%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5%;
+        height: 10%;
+        bottom: -10px;
+        right: -5px;
+        border-bottom: 5px solid $color-primary;
+        border-right: 5px solid $color-primary;
+        transition: all 0.25s;
+      }
+    }
+    &_starter--width {
+      @include menu_width;
+    }
+    &_dish--width {
+      @include menu_width;
+    }
+    &_dessert--width {
+      @include menu_width;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+}

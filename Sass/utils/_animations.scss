@@ -1,0 +1,41 @@
+/*Loading Spinner*/
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    box-shadow: 0 0 10px $color-secondary, 0 0 20px $color-secondary,
+      0 0 30px $color-secondary, 0 0 40px $color-tertiary,
+      0 0 50px $color-tertiary, 0 0 60px $color-tertiary,
+      0 0 70px $color-tertiary, 0 0 80px $color-tertiary,
+      0 0 90px $color-tertiary, 0 0 100px $color-tertiary;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  Apparition des plats  */
+
+@keyframes Appear {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes Appear-on {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

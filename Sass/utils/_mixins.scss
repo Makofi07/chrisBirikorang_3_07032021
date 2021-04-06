@@ -1,0 +1,13 @@
+/**       @mixin   **/
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin fontBody {
+  font-size: clamp(1rem, 1.2vw, 2.5rem);
+}
+@mixin menu_width {
+  width: 30%;
+}

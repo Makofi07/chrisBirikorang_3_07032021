@@ -1,0 +1,48 @@
+/*    CTA page d'acceuil*/
+
+.header_cta {
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 10px 15px 10px 15px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, $color-secondary, $color-primary 80%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 0px 0px 7px 6px #c6a4c2;
+    /* propriété permettant d'inverser color et background mais avec Darken en sass je ne sais pas faire
+      background: linear-gradient(135deg, #ff79da, #9356dc 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;*/
+    background: darken($color-primary, 10%);
+  }
+}
+
+/*   BTN   page menu  */
+
+.menu_btn {
+  @include flexCenter(column);
+  &_order {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, $color-secondary, $color-primary 80%);
+    color: #f4f1f1;
+    margin: 4em 0 4em 0;
+    padding: 0.8em 3em;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px 2px #bdbdbd;
+    transition: transform 0.3s ease-in-out;
+    &:hover,
+    :active {
+      transform: scale(1.05);
+      text-transform: uppercase;
+      background: lighten($color-primary, 5%);
+    }
+    &:active {
+      box-shadow: 0px 0px 7px 6px #c6a4c2;
+    }
+  }
+}
